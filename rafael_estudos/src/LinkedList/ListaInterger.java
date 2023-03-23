@@ -1,15 +1,14 @@
 package LinkedList;
 
-public class singState {
+public class ListaInterger {
 	public static void main(String[]args) {
-		
-		ListaLigada<String> lista = new ListaLigada<String>();
-		lista.adicionar("AC");
-		lista.adicionar("BA");
-		lista.adicionar("SP");
-		lista.adicionar("PR");
-		lista.adicionar("RS");
-		lista.adicionar("ES");
+		ListaLigada<Integer> lista = new ListaLigada<Integer>();
+		lista.adicionar(1);
+		lista.adicionar(3);
+		lista.adicionar(7);
+		lista.adicionar(9);
+		lista.adicionar(2);
+		lista.adicionar(5);
 		System.out.println(lista.getTamanho());
 		System.out.println(lista.getPrimeiro().getValor());
 		System.out.println(lista.getUltimo().getValor());
@@ -18,12 +17,13 @@ public class singState {
 			System.out.println(lista.Get(i).getValor() );
 			i++;
 		}
-		lista.remover("ba");
-		System.out.println("lista com o elemento removed \n\n\n");
+		lista.remover(6);
+		System.out.println("apos o valor ser removido");
 		 i = 0;
 		while( i < lista.getTamanho() ) {
 			System.out.println(lista.Get(i).getValor() );
 			i++;
 		}
+	
 	}
 }

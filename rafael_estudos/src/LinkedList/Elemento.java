@@ -1,21 +1,21 @@
 package LinkedList;
 
-public class Elemento {
-	private String Valor;
-	private Elemento proximo;
-	public Elemento(String novoValor) {
+public class Elemento<tipo> {
+	private tipo Valor;
+	private Elemento <tipo> proximo;
+	public Elemento(tipo novoValor) {
 		this.Valor = novoValor;
 	}
-	public String getValor() {
+	public tipo getValor() {
 		return Valor;
 	}
-	public void setValor(String Valor) {
+	public void setValor(tipo Valor) {
 		this.Valor = Valor;
 	}
-	public Elemento getProximo() {
+	public Elemento<tipo> getProximo() {
 		return proximo;
 	}
-	public void setProximo(Elemento proximo) {
+	public void setProximo(Elemento<tipo> proximo) {
 		this.proximo = proximo;
 	}
 	

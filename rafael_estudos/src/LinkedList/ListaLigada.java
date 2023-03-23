@@ -1,20 +1,20 @@
 package LinkedList;
 
-public class ListaLigada {
+public class ListaLigada<tipo> {
 
-	private Elemento Ultimo;
-	private Elemento primeiro;
+	private Elemento <tipo> Ultimo;
+	private Elemento <tipo> primeiro;
 	private int tamanho;
-	public Elemento getUltimo() {
+	public Elemento<tipo> getUltimo() {
 		return Ultimo;
 	}
-	public void setProximo(Elemento proximo) {
+	public void setProximo(Elemento<tipo> proximo) {
 		this.Ultimo = proximo;
 	}
-	public Elemento getPrimeiro() {
+	public Elemento<tipo> getPrimeiro() {
 		return primeiro;
 	}
-	public void setPrimeiro(Elemento primeiro) {
+	public void setPrimeiro(Elemento<tipo> primeiro) {
 		this.primeiro = primeiro;
 	}
 	public int getTamanho() {
@@ -23,8 +23,8 @@ public class ListaLigada {
 	public void setTamanho(int tamanho) {
 		this.tamanho = tamanho;
 	}
-	public void adicionar(String  novoValor) {
-		Elemento novoElemento = new Elemento(novoValor);
+	public void adicionar(tipo  novoValor) {
+		Elemento<tipo> novoElemento = new Elemento<tipo>(novoValor);
 		if(this.primeiro == null && this.Ultimo == null) {
 			this.primeiro = novoElemento;
 			this.Ultimo = novoElemento;	
@@ -35,11 +35,11 @@ public class ListaLigada {
 		}
 		this.tamanho ++;
 	}
-	public void remover(String valorProcurado) {
-		Elemento anterior = null;
-		Elemento atual = this.primeiro;
+	public void remover(tipo valorProcurado) {
+		Elemento<tipo> anterior = null;
+		Elemento<tipo> atual = this.primeiro;
 		for(int i = 0; i <getTamanho(); i++) {
-			if(atual.getValor().equalsIgnoreCase(valorProcurado)) {
+			if(atual.getValor().equals(valorProcurado)) {
 			
 				if(this.tamanho==1) {
 					this.primeiro = null;
@@ -62,8 +62,8 @@ public class ListaLigada {
 			
 		}
 	}
-	public Elemento Get(int posicao) {
-		Elemento atual = this.primeiro;
+	public Elemento<tipo> Get(int posicao) {
+		Elemento<tipo> atual = this.primeiro;
 		for(int i = 0; i < posicao; i++) {
 			if(atual.getProximo() != null) {
 				atual = atual.getProximo();
