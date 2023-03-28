@@ -71,5 +71,8 @@ public class ListaLigada<tipo> {
 		}
 				return atual;
 	}
+	public  IteratorLinkedList<tipo> getIterator(){
+		return new IteratorLinkedList<tipo>(this.primeiro);
+	}
 	
 }
