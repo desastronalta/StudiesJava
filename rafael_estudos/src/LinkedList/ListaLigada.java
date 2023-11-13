@@ -45,10 +45,10 @@ public class ListaLigada<tipo> {
 					this.primeiro = null;
 					this.Ultimo = null;
 				}
-				else if(atual == primeiro) {
+				else if(atual.equals(primeiro)) {
 					this.primeiro = atual.getProximo();
 				}
-				else if(atual == Ultimo) {
+				else if(atual.equals(Ultimo)) {
 					this.Ultimo = anterior;
 					anterior.setProximo(null);
 				}
